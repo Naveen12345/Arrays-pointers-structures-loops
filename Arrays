@@ -1,0 +1,250 @@
+1)package main 
+  
+import "fmt"
+  
+func main() { 
+  
+var array[5]int 
+fmt.Println("no. of elements in array :", array) 
+  
+} 
+
+OUtPUT:
+no. of elements in array : [0 0 0 0 0]
+
+2)
+package main 
+  
+import "fmt"
+  
+func main() { 
+  
+    
+arr1:= []int{1,2,3,4,5} 
+ 
+  
+ 
+fmt.Println("Length of the array 1 is:", len(arr1)) 
+
+} 
+
+OUTPUT:-
+Length of the array 1 is: 5
+
+3)
+package main 
+  
+import "fmt"
+  
+func main() { 
+
+arr:= []string{"n","a","v","e","e","n"} 
+  
+
+fmt.Println("Elements of the array:") 
+
+for i:=0;i<len(arr);i++{ 
+fmt.Println(arr[i]) 
+} 
+  
+}
+
+OUTPUT:-
+
+Elements of the array:
+n
+a
+v
+e
+e
+n 
+
+4)
+package main
+
+
+import (
+	"fmt"
+)
+
+func main() {
+	var naveen[4] string
+	
+	naveen[0]="n"
+	naveen[1]="a"
+	naveen[2]="v"
+	naveen[3]="y"
+	fmt.Println("element 1 in var is :",naveen[0])
+	fmt.Println("element 2 in var is :",naveen[1])
+	fmt.Println("element 3 in var is :",naveen[2])
+	fmt.Println("element 4 in var is :",naveen[3])
+	
+}
+
+OUTPUT:-
+
+element 1 in var is : n
+element 2 in var is : a
+element 3 in var is : v
+element 4 in var is : y
+
+
+5)
+
+package main 
+  
+import "fmt"
+  
+func main() { 
+
+arr1:= [...]int{9,7,6,4,5,3,2,4}  
+  
+fmt.Println("Length of the array 1 is:", len(arr1)) 
+
+} 
+
+
+OUTPUT:-
+
+Length of the array 1 is: 8
+
+
+6)
+
+package main 
+  
+import "fmt"
+  
+func main() { 
+  
+arr:= [4]string{"Kloud", "one", "Technology", "pvt.ltd"} 
+  
+fmt.Println("Elements of the array:") 
+  
+for i:= 0; i < 3; i++{ 
+fmt.Println(arr[i]) 
+} 
+  
+} 
+
+OUTPUT:-
+
+Elements of the array:
+Kloud
+one
+Technology
+
+
+7)
+package main 
+  
+import "fmt"
+  
+func main() { 
+  
+arr:= []string{"software","trainee","Kloud", "one", "Technology", "pvt.ltd"} 
+n:=len(arr)
+fmt.Println("Elements of the array:") 
+  
+for i:= 0; i < n; i++{ 
+fmt.Println(arr[i]) 
+} 
+  
+} 
+
+OUTPUT:-
+
+Elements of the array:
+software
+trainee
+Kloud
+one
+Technology
+pvt.ltd
+
+
+8)
+package main 
+  
+import "fmt"
+  
+func main() {     
+ 
+arr:= [...]int{1, 2, 3, 4, 5, 6, 7, 8} 
+fmt.Println("elements are:") 
+for i:=0; i < len(arr); i++{ 
+
+fmt.Printf("%d\n", arr[i]) 
+} 
+} 
+
+OUTPUT:-
+
+elements are:
+1
+2
+3
+4
+5
+6
+7
+8
+
+
+9)
+
+package main 
+  
+import "fmt"
+  
+func main() { 
+       
+arr1:= [3]int{9,7,6} 
+arr2:= [...]int{9,7,6} 
+arr3:= [3]int{9,5,3} 
+arr4:= [3]int{9,7,6} 
+fmt.Println(arr1==arr2) 
+fmt.Println(arr2==arr3) 
+fmt.Println(arr1==arr3) 
+fmt.Println(arr1==arr4) 
+}
+
+OUTPUT:-
+
+true
+false
+false
+true
+
+
+10)
+package main 
+  
+import "fmt"
+  
+func main() { 
+  
+
+arr:= [3][3]string{{"GOLANG", "JIRA", "Python"},  
+                   {"Java", "AWS", "Cloud"}, 
+                    {"C++", "Go", "HTML"},} 
+ 
+fmt.Println("Elements of Array 1") 
+for x:= 0; x < 3; x++{ 
+for y:= 0; y < 3; y++{ 
+fmt.Println(arr[x][y]) 
+}
+}} 
+
+OUTPUT:-
+
+Elements of Array 1
+GOLANG
+JIRA
+Python
+Java
+AWS
+Cloud
+C++
+Go
+HTML
