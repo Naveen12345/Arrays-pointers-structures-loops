@@ -1,0 +1,222 @@
+1)
+package main
+
+import "fmt"
+
+func main() {
+   var a int = 10   
+   fmt.Printf("Address of a : %x\n", &a  )
+}
+
+OUTPUT:-
+
+Address of a : c00002c008
+
+
+2)
+
+package main
+
+import "fmt"
+
+func main() {
+   var  ptr *int
+
+   fmt.Printf("The value of ptr is : %x\n", ptr  )
+}
+The value of ptr is : 0
+
+OUTPUT:-
+
+The value of ptr is : 0
+
+3)
+
+package main
+  
+import "fmt"
+  
+func main() { 
+  
+    x := 0xFF 
+    y := 0x9C 
+       
+    fmt.Printf("Type of variable x is %T\n", x) 
+    fmt.Printf("Value of x in hexdecimal is %X\n", x) 
+    fmt.Printf("Value of x in decimal is %v\n", x) 
+      
+    fmt.Printf("Type of variable y is %T\n", y) 
+    fmt.Printf("Value of y in hexdecimal is %x\n", y) 
+    fmt.Printf("Value of y in decimal is %v\n", y)     
+      
+} 
+
+
+OUTPUT:-
+
+Type of variable x is int
+Value of x in hexdecimal is FF
+Value of x in decimal is 255
+Type of variable y is int
+Value of y in hexdecimal is 9c
+Value of y in decimal is 156
+
+4)
+
+package main
+  
+import "fmt"
+  
+func main() { 
+  
+   var p *int
+   fmt.Printf("p=",p)
+   
+} 
+
+OUTPUT:-
+
+p=%!(EXTRA *int=<nil>)
+
+
+5)
+package main 
+  
+import "fmt"
+  
+func main() { 
+  
+    var x = 225
+    var a = &x 
+  
+    fmt.Println("Value stored in x = ", x) 
+    fmt.Println("Address of x = ", &x) 
+    fmt.Println("Value stored in pointer variable a = ", a) 
+}
+
+OUTPUT:-
+
+Value stored in x =  225
+Address of x =  0xc000094010
+Value stored in pointer variable a =  0xc000094010 
+
+
+6)
+
+package main 
+   
+import "fmt"
+   
+func main() { 
+   
+    var x = 225 
+       
+  
+    var a = &x 
+   
+    fmt.Println("Value stored in x before changing = ", x) 
+    fmt.Println("Address of x = ", &x) 
+    fmt.Println("Value stored in pointer variable a = ", a) 
+ 
+    fmt.Println("Value stored in x(*a) Before Changing = ", *a) 
+  
+
+    *a = 500 
+  
+     fmt.Println("Value stored in x(*a) after Changing = ",x) 
+  
+} 
+
+OUTPUT:-
+
+Value stored in x before changing =  225
+Address of x =  0xc00002c008
+Value stored in pointer variable a =  0xc00002c008
+Value stored in x(*a) Before Changing =  225
+Value stored in x(*a) after Changing =  500
+
+7)
+
+
+package main
+
+import "fmt"
+
+func main() {
+    var sea string = "pirana"
+    var pointer *string = &sea
+
+    fmt.Println("sea =", sea)
+    fmt.Println("pointer =", pointer)
+
+    fmt.Println("*pointer =", *pointer)
+}
+
+OUTPUT:-
+
+sea = pirana
+pointer = 0xc000010200
+*pointer = pirana
+
+8)
+
+package main
+
+import ("fmt")
+
+func main() {  
+    a := 34
+    var b *int
+    if b == nil {
+        fmt.Println("b is", b)
+        b = &a
+        fmt.Println("b after initialization is", b)
+    }
+}
+
+OUTPUT:-
+
+b is <nil>
+b after initialization is 0xc000100010
+
+9)
+
+package main
+
+import (  
+    "fmt"
+)
+
+func main() {  
+    size := new(int)
+    fmt.Printf("Size value is %d, type is %T, address is %v\n", *size, size, size)
+    *size = 85
+    fmt.Println("New size value is", *size)
+}
+
+OUTPUT:-
+
+Size value is 0, type is *int, address is 0xc00002c008
+New size value is 85
+
+10)
+package main
+
+import (  
+    "fmt"
+)
+
+func main() {  
+    b := 301
+    a := &b
+    fmt.Println("address of b is", a)
+    fmt.Println("value of b is", *a)
+    *a++
+    fmt.Println("new value of b is", b)
+}
+
+OUTPUT:-
+
+address of b is 0xc00002c008
+value of b is 301
+new value of b is 302
