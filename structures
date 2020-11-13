@@ -1,0 +1,175 @@
+*DECLARING STRUCTURE
+1)
+type Address struct {
+      name string 
+      street string
+      city string
+      state string
+      Pincode int
+}
+
+2)
+package main 
+  
+import "fmt"
+   
+type Address struct { 
+    Name    string 
+    Address   string 
+    Pincode int
+} 
+  
+func main() { 
+  
+   
+    a1 := Address{"Naveen", "Rajampet", 112213} 
+  
+    fmt.Println("Address1: ", a1) 
+   
+} 
+
+OUTPUT:-
+
+Address1:  {Naveen Rajampet 112213}
+
+
+3)
+
+package main 
+
+import "fmt" 
+type Car struct { 
+	Name, Model, Color string 
+	Weight		 float64 
+} 
+ 
+func main() { 
+	c := Car{Name: "Ferrari", Model: "GTC4", 
+			Color: "Red", Weight: 1920} 
+
+ 
+	fmt.Println("Car Name: ", c.Name) 
+	fmt.Println("Car Color: ", c.Color)
+}
+
+OUTPUT:-
+
+Car Name:  Ferrari
+Car Color:  Red
+
+4)
+
+ 
+package main 
+  
+import "fmt"
+  
+ 
+type Bike struct { 
+    Name, Model, Color string 
+    Weight         float64 
+} 
+ 
+func main() { 
+    b := Bike{Name: "APACHE", Model: "RTR160", 
+            Color: "Red", Weight: 148} 
+  
+
+    fmt.Println("Bike Name: ", b.Name) 
+    fmt.Println("Bike Color: ", b.Color) 
+  
+    b.Color = "Black"
+    fmt.Println("Bike: ", b) 
+}
+
+OUTPUT:-
+
+Bike Name:  APACHE
+Bike Color:  Red
+Bike:  {APACHE RTR160 Black 148}
+
+
+5)
+
+ 
+package main 
+
+import "fmt"
+
+
+type Employee struct { 
+	firstName, lastName string 
+	age, salary int
+} 
+
+func main() { 
+
+	emp := &Employee{"Naveen", "Jalli", 25, 30000} 
+
+	fmt.Println("First Name:", (*emp).firstName) 
+	fmt.Println("Age:", (*emp).age) 
+	fmt.Println("Last Name:",(*emp).lastName)
+	fmt.Println("salary:",(*emp).salary)
+} 
+
+OUTPUT:-
+
+First Name: Naveen
+Age: 25
+Last Name: Jalli
+salary: 30000
+
+
+7)
+
+
+package main
+
+import "fmt"
+
+type Books struct {
+   title string
+   author string
+   subject string
+   book_id int
+}
+func main() {
+   var Book1 Books    
+   var Book2 Books    
+ 
+   
+   Book1.title = "dreams"
+   Book1.author = "naveen"
+   Book1.subject = "drama"
+   Book1.book_id = 1424634
+
+   
+   Book2.title = "skyhigh"
+   Book2.author = "naveen"
+   Book2.subject = "drama"
+   Book2.book_id = 154376
+ 
+   
+   fmt.Printf( "Book 1 title : %s\n", Book1.title)
+   fmt.Printf( "Book 1 author : %s\n", Book1.author)
+   fmt.Printf( "Book 1 subject : %s\n", Book1.subject)
+   fmt.Printf( "Book 1 book_id : %d\n", Book1.book_id)
+
+   fmt.Printf("\n")
+   fmt.Printf( "Book 2 title : %s\n", Book2.title)
+   fmt.Printf( "Book 2 author : %s\n", Book2.author)
+   fmt.Printf( "Book 2 subject : %s\n", Book2.subject)
+   fmt.Printf( "Book 2 book_id : %d\n", Book2.book_id)
+}
+
+OUTPUT:-
+
+Book 1 title : dreams
+Book 1 author : naveen
+Book 1 subject : drama
+Book 1 book_id : 1424634
+
+Book 2 title : skyhigh
+Book 2 author : naveen
+Book 2 subject : drama
+Book 2 book_id : 154376
